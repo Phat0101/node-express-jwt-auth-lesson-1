@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/iamshaunjp/node-express-jwt-auth/issues"
   },
+  "engines": {
+    "node": "v13.7.0"
+  },
   "homepage": "https://github.com/iamshaunjp/node-express-jwt-auth#readme"
 }
