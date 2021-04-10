@@ -18,12 +18,11 @@ app.set('view engine', 'ejs');
 
 // database connection
 let port = process.env.PORT || 3000;
-// const dbURI = process.env.DBURI;
-// mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
-//   .then((result) => app.listen(port))
-//   .catch((err) => console.log(err));
+const dbURI = process.env.DBURI;
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+  .then((result) => app.listen(port))
+  .catch((err) => console.log(err));
 
-app.listen(port);
 // // routes
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
